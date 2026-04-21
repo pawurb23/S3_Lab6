@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Abstractions/Abstractions.csproj" />
+  <Project Path="Data/Data.csproj" />
+  <Project Path="Domain/Domain.csproj" />
+  <Project Path="S3_Lab6/S3_Lab6.csproj" />
+</Solution>
