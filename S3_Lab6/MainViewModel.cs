@@ -23,9 +23,9 @@ namespace S3_Lab6.ViewModel
         public ICommand AddCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public MainViewModel()
+        public MainViewModel(IPlywacyRepository repository)
         {
-            _repository = new PlywakRepository(); //
+            _repository = repository;
             Plywacy = new ObservableCollection<Plywak>();
 
             LoadCommand = new RelayCommand(_ => LoadData());

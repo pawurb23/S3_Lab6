@@ -1,4 +1,9 @@
 <Solution>
+  <Folder Name="/ViewModel/">
+    <File Path="MainViewModel.cs" />
+    <File Path="RelayCommand.cs" />
+    <File Path="ViewModelBase.cs" />
+  </Folder>
   <Project Path="Abstractions/Abstractions.csproj" />
   <Project Path="Data/Data.csproj" />
   <Project Path="Domain/Domain.csproj" />

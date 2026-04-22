@@ -4,10 +4,6 @@
         xmlns:vm="clr-namespace:S3_Lab6.ViewModel"
         Title="Zarządzanie Pływakami" Height="450" Width="800">
 
-    <Window.DataContext>
-        <vm:MainViewModel/>
-    </Window.DataContext>
-
     <Grid>
         <DataGrid x:Name="DgdPlywacy" ItemsSource="{Binding Plywacy}" 
                   SelectedItem="{Binding SelectedPlywak}"

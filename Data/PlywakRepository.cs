@@ -7,7 +7,12 @@ namespace Data
 {
     public class PlywakRepository : IPlywacyRepository
     {
-        private BDZawodnicy db = new BDZawodnicy();
+        private readonly BDZawodnicy db;
+
+        public PlywakRepository(BDZawodnicy context)
+        {
+            db = context;
+        }
 
         public void Dodaj(Plywak plywak)
         {
