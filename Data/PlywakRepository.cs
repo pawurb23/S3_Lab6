@@ -1,8 +1,7 @@
 ﻿using Domain;
 using S3_Lab5.Abstractions;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace Data
 {
@@ -10,29 +9,36 @@ namespace Data
     {
         private BDZawodnicy db = new BDZawodnicy();
 
-        void IPlywacyRepository.Dodaj(Plywak plywak)
+        public void Dodaj(Plywak plywak)
         {
-            throw new NotImplementedException();
+            db.Plywacy.Add(plywak);
+            db.SaveChanges();
         }
 
-        void IPlywacyRepository.Edytuj(Plywak plywak)
+        public void Edytuj(Plywak plywak)
         {
-            throw new NotImplementedException();
+            db.Plywacy.Update(plywak);
+            db.SaveChanges();
         }
 
-        Plywak IPlywacyRepository.PobierzPoId(int id)
+        public Plywak PobierzPoId(int id)
         {
-            throw new NotImplementedException();
+            return db.Plywacy.Find(id);
         }
 
-        IEnumerable<Plywak> IPlywacyRepository.PobierzWszystkich()
+        public IEnumerable<Plywak> PobierzWszystkich()
         {
             return db.Plywacy.ToList();
         }
 
-        void IPlywacyRepository.Usun(int id)
+        public void Usun(int id)
         {
-            throw new NotImplementedException();
+            var plywak = db.Plywacy.Find(id);
+            if (plywak != null)
+            {
+                db.Plywacy.Remove(plywak);
+                db.SaveChanges();
+            }
         }
     }
 }

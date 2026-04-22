@@ -20,5 +20,10 @@ namespace Domain
         public bool CzyAktywnyZawodnik { get; set; }
         [Column(TypeName = "TINYINT")]
         public int? IloscZlotychMedali { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ImieNazwisko} (ur. {RokUrodzenia}) - Czas: {NajlepszyCzas}s";
+        }
     }
 }

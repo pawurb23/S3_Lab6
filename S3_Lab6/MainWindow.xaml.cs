@@ -21,15 +21,5 @@ namespace S3_Lab6
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var repo = new PlywakRepository();
-
-            foreach (var p in repo.PobierzWszystkich())
-            {
-                LstBox.Items.Add(p);
-            }
-        }
     }
 }
